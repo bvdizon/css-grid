@@ -16,6 +16,11 @@ div {
   font-size: 20px;
   font-weight: 700;
   margin: 1px;
+  text-transform: capitalize;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 div:nth-child(odd) {
