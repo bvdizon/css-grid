@@ -1,21 +1,30 @@
 section {
   display: grid;
   grid-gap: 3px;
-  /* this will result in a fix width grid cells:
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 100px;
+  /* the line below is the magic algorith that fixes empty grids */
+  grid-auto-flow: dense;
+}
 
-        grid-template-columns: repeat(6, 100px);
-  */
+img {
+  /* my additional styles for the images to show better */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
-  /* "auto-fit" will try to accommodate as many grids 
-     note: using fraction units (fr) will have one grid
-     cell occupy the entire row, only absolute value is allowed:
+.horizontal {
+  /* spans to the next two column grid */
+  grid-column: span 2;
+}
 
-        grid-template-columns: repeat(auto-fit, 100px);
-  */
+.vertical {
+  /* spans to the next two row grid */
+  grid-row: span 2;
+}
 
-  /* "minmax" let's you use fr units, as well as take control
-     on how your grids will display. 
-  */
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-template-rows: repeat(2, 100px);
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
 }
