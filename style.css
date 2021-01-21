@@ -1,0 +1,21 @@
+section {
+  display: grid;
+  grid-gap: 3px;
+  /* this will result in a fix width grid cells:
+
+        grid-template-columns: repeat(6, 100px);
+  */
+
+  /* "auto-fit" will try to accommodate as many grids 
+     note: using fraction units (fr) will have one grid
+     cell occupy the entire row, only absolute value is allowed:
+
+        grid-template-columns: repeat(auto-fit, 100px);
+  */
+
+  /* "minmax" let's you use fr units, as well as take control
+     on how your grids will display. 
+  */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 100px);
+}
