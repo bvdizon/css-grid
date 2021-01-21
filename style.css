@@ -3,7 +3,7 @@ section {
   grid-gap: 3px;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-auto-rows: 100px;
-  /* the line below is the magic algorith that fixes empty grids */
+  /* the line below is the magic algorithm that fixes empty grids */
   grid-auto-flow: dense;
 }
 
