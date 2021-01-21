@@ -1,0 +1,8 @@
+section {
+  display: grid;
+  /* using 'grid-template' --- short hand to write
+     grid-template-columns and rows */
+  /* please note: row-template / column-template */
+  grid-template: repeat(2, 50px) / repeat(3, 1fr);
+  grid-gap: 3px;
+}
