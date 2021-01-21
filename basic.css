@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+div {
+  background-color: blueviolet;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 1px;
+}
+
+div:nth-child(odd) {
+  background-color: burlywood;
+}
