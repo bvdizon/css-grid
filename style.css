@@ -1,8 +1,21 @@
 section {
+  border: 1px solid brown;
+  height: 400px;
+
   display: grid;
-  /* using 'grid-template' --- short hand to write
-     grid-template-columns and rows */
-  /* please note: row-template / column-template */
-  grid-template: repeat(2, 50px) / repeat(3, 1fr);
   grid-gap: 3px;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+
+  /* aligns the content of a grid container horizontally:
+         =>justify-content: start (default) | center | end |
+                  space-between | space-around | space-evenly
+  */
+  justify-content: space-between;
+
+  /* aligns the content of a grid container vertically:
+         =>align-content: start (default) | center | end |
+                  space-between | space-around | space-evenly
+  */
+  align-content: space-evenly;
 }
