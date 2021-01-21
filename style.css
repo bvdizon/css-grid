@@ -1,0 +1,33 @@
+section {
+  /* notice that height is set 
+     this will make the grid adjust grid height on resise */
+  height: 100%;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-rows: 40px auto 40px;
+  grid-template-columns: repeat(12, 1fr);
+  /* here we set the grid template areas 
+     note: you can use dot "." for area you want blank 
+     note: area will only be valid if it is a rectangle */
+  grid-template-areas:
+    'm h h h h h h h h h h h'
+    'm . c c c c c c c c c .'
+    'm f f f f f f f f f f f';
+}
+
+.header {
+  /* here we assign areas based on the grid-template-areas */
+  grid-area: h;
+}
+
+.menu {
+  grid-area: m;
+}
+
+.content {
+  grid-area: c;
+}
+
+.footer {
+  grid-area: f;
+}
